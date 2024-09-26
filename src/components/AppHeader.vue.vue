@@ -4,19 +4,19 @@
             <div class="header__menu">
                 <ul class="header__menu-list">
                     <li class="header__menu__item roboto-regular" id="menu--home">
-                        Home
+                        <RouterLink id="nav" to="/">Home</RouterLink>
                     </li>
                     <li class="header__menu__item roboto-regular" id="menu--about">
-                        About
+                        <RouterLink id="nav" to="/about">About</RouterLink>
                     </li>
                     <li class="header__menu__item roboto-regular" id="menu--contact">
-                        Contact
+                        <RouterLink id="nav" to="/about">Contact</RouterLink>
                     </li>
                     <li class="header__menu__item roboto-regular" id="menu--gallery">
-                        Gallery
+                        <RouterLink id="nav" to="/about">Gallery</RouterLink>
                     </li>
                     <li class="header__menu__item roboto-regular" id="menu--team">
-                        Team
+                        <RouterLink id="nav" to="/about">Team</RouterLink>
                     </li>
                 </ul>
             </div>
@@ -39,6 +39,14 @@ export default {
 
 
 <style scoped>
+#nav{
+    color: #212529;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+#nav:hover{
+    color: red;
+}
 .header {
     height: 80px;
     background-color: #ebe4e4;
@@ -79,5 +87,9 @@ export default {
     right: 10px;
     top: 50%;
     transform: translateY(35%);
+}
+.header__menu__item:hover{
+    cursor: pointer;
+    color: red;
 }
 </style>
